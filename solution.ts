@@ -60,7 +60,7 @@ interface Book {
 const printBookDetails = (data: Book) => {
   console.log(
     `Title: ${data.title}, Author: ${data.author}, Published: ${
-      data.author
+      data.publishedYear
     }, Available: ${data.isAvailable ? "Yes" : "No"}`
   );
 };
