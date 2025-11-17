@@ -27,8 +27,8 @@ class Person {
     this.age = age;
   }
 
-  getDetails() {
-    return `Name: ${this.name}, Age: ${this.age}`;
+  getDetails(): string {
+    return `'Name: ${this.name}, Age: ${this.age}'`;
   }
 }
 
@@ -78,13 +78,15 @@ const getUniqueValues = <T extends number | string>(arr1: T[], arr2: T[]) => {
 
   for (let i = 0; i < arr1.length; i++) {
     if (!isExist(arr1[i], uniqueItems)) {
-      uniqueItems.push(arr1[i]);
+      uniqueItems[uniqueItems.length] = arr1[i];
+      // uniqueItems.push(arr1[i]);
     }
   }
 
   for (let i = 0; i < arr2.length; i++) {
     if (!isExist(arr2[i], uniqueItems)) {
-      uniqueItems.push(arr2[i]);
+      uniqueItems[uniqueItems.length] = arr2[i];
+      // uniqueItems.push(arr2[i]);
     }
   }
 
